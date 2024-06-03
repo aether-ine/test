@@ -16,13 +16,15 @@
       <h2>Presidencía</h2>
       <iframe id="iframe1" src="https://prep2024.ine.mx/publicacion/nacional/presidencia/nacional/candidatura" style="width: 100%; height: 800px;" frameborder="0"></iframe>
       <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe1')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="gotoFrame('iframe1')">Ir</button>
     </div>
 
 
     <div class="col-12 col-md-4">
       <h2>Monterrey, N.L</h2>
       <iframe id="iframe2" src="https://prep.uanl.mx/GC01M40.htm" style="width: 100%; height: 1000px;" frameborder="0"></iframe>
-      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe1')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe2')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="gotoFrame('iframe2')">Ir</button>
     </div>
 
     <!-- Columna 3 -->
@@ -30,6 +32,7 @@
       <h2>Victoria</h2>
       <iframe id="iframe3" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/victoria" style="width: 100%; height: 800px;" frameborder="0"></iframe>
       <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe3')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="gotoFrame('iframe3')">Ir</button>
       <!-- Agrega los demás iframes aquí -->
     </div>
   </div>
@@ -39,12 +42,14 @@
       <h2>Tampico</h2>
       <iframe id="iframe4" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/tampico" style="width: 100%; height: 800px;" frameborder="0"></iframe>
       <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe4')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="gotoFrame('iframe4')">Ir</button>
     </div>
     <!-- Columna 5 -->
     <div class="col-12 col-md-4 ">
       <h2>Reynosa</h2>
       <iframe id="iframe5" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/reynosa" style="width: 100%; height: 800px;" frameborder="0"></iframe>
       <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe5')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="gotoFrame('iframe5')">Ir</button>
       <!-- Agrega los demás iframes aquí -->
     </div>
     <!-- Columna 6 -->
@@ -52,6 +57,7 @@
       <h2>Rio Bravo</h2>
       <iframe id="iframe6" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/rio_bravo" style="width: 100%; height: 800px;" frameborder="0"></iframe>
       <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe6')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="gotoFrame('iframe6')">Ir</button>
       <!-- Agrega los demás iframes aquí -->
     </div>
   </div>
@@ -61,12 +67,14 @@
       <h2>Matamoros</h2>
       <iframe id="iframe7" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/matamoros" style="width: 100%; height: 800px;" frameborder="0"></iframe>
       <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe7')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="gotoFrame('iframe7')">Ir</button>
     </div>
     <!-- Columna 8 -->
     <div class="col-12 col-md-4">
       <h2>Ciudad Madero</h2>
       <iframe id="iframe8" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/ciudad_madero" style="width: 100%; height: 800px;" frameborder="0"></iframe>
       <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe8')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="gotoFrame('iframe8')">Ir</button>
       <!-- Agrega los demás iframes aquí -->
     </div>
     <!-- Puedes agregar más columnas si es necesario -->
@@ -75,7 +83,8 @@
     <div class="col-12 col-md-4">
       <h2>Altamira</h2>
       <iframe id="iframe9" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/altamira" style="width: 100%; height: 800px;" frameborder="0"></iframe>
-      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe2')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe9')">Refrescar</button>
+      <button class="btn btn-primary mt-2" onclick="gotoFrame('iframe9')">Ir</button>
 
       <!-- Agrega los demás iframes aquí -->
     </div>
@@ -89,6 +98,11 @@
   function refreshFrame(iframeId) {
     var iframe = document.getElementById(iframeId);
     iframe.src = iframe.src; // Recargar la misma URL del iframe
+  }
+
+  function gotoFrame(iframeId) {
+    var iframe = document.getElementById(iframeId);
+    window.open(iframe.src, '_blank').focus();
   }
 </script>
 </body>
