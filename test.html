@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <!-- Columna 1 -->
+    <div class="col-12 col-md-4">
+      <h2>Presidencía</h2>
+      <iframe id="iframe1" src="https://prep2024.ine.mx/publicacion/nacional/presidencia/nacional/candidatura" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe1')">Refrescar</button>
+    </div>
+    <!-- Columna 2 -->
+    <div class="col-12 col-md-4">
+      <h2>Altamira</h2>
+      <iframe id="iframe2" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/altamira" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe2')">Refrescar</button>
+      <!-- Agrega los demás iframes aquí -->
+    </div>
+    <!-- Columna 3 -->
+    <div class="col-12 col-md-4">
+      <h2>Victoria</h2>
+      <iframe id="iframe3" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/victoria" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe3')">Refrescar</button>
+      <!-- Agrega los demás iframes aquí -->
+    </div>
+  </div>
+  <div class="row">
+    <!-- Columna 4 -->
+    <div class="col-12 col-md-4">
+      <h2>Tampico</h2>
+      <iframe id="iframe4" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/tampico" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe4')">Refrescar</button>
+    </div>
+    <!-- Columna 5 -->
+    <div class="col-12 col-md-4">
+      <h2>Reynosa</h2>
+      <iframe id="iframe5" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/reynosa" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe5')">Refrescar</button>
+      <!-- Agrega los demás iframes aquí -->
+    </div>
+    <!-- Columna 6 -->
+    <div class="col-12 col-md-4">
+      <h2>Rio Bravo</h2>
+      <iframe id="iframe6" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/rio_bravo" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe6')">Refrescar</button>
+      <!-- Agrega los demás iframes aquí -->
+    </div>
+  </div>
+  <div class="row">
+    <!-- Columna 7 -->
+    <div class="col-12 col-md-4">
+      <h2>Matamoros</h2>
+      <iframe id="iframe7" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/matamoros" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe7')">Refrescar</button>
+    </div>
+    <!-- Columna 8 -->
+    <div class="col-12 col-md-4">
+      <h2>Ciudad Madero</h2>
+      <iframe id="iframe8" src="https://prep2024tamps.mx/ayuntamientos/detalle/votos-candidatura/ciudad_madero" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+      <button class="btn btn-primary mt-2" onclick="refreshFrame('iframe8')">Refrescar</button>
+      <!-- Agrega los demás iframes aquí -->
+    </div>
+    <!-- Puedes agregar más columnas si es necesario -->
+  </div>
+</div>
+
+<!-- Bootstrap JS (opcional, solo si necesitas funcionalidades específicas de Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function refreshFrame(iframeId) {
+    var iframe = document.getElementById(iframeId);
+    iframe.src = iframe.src; // Recargar la misma URL del iframe
+  }
+</script>
+</body>
+</html>
